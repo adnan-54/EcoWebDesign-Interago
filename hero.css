@@ -1,5 +1,5 @@
 .hero {
-  height: 100dvh;
+  height: 110dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,12 +77,14 @@
 }
 
 @keyframes parallax-animation {
-  0% {
+  from {
+    filter: blur(15px);
     opacity: 0;
     transform: perspective(850px) translateY(100%) rotateX(95deg)
       scale(50%, 20%);
   }
-  100% {
+  to {
+    filter: blur(0);
     opacity: 1;
     transform: perspective(850px) translateY(52%) rotateX(30deg) scale(85%, 75%);
   }

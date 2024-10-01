@@ -12,14 +12,18 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="utilities.css" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="hero.css" />
 
+    <link rel="stylesheet" href="integracoes.css" />
+
     <link rel="stylesheet" href="ajuda.css" />
     <link rel="stylesheet" href="footer.css" />
 
-    <script src="hero.js"></script>
+    <script defer src="index.js"></script>
+    <script defer src="hero.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -58,7 +62,7 @@
         </p>
 
         <a class="button large-button gradient-button slide-left" href="#">
-          Agender demonstração</a
+          Agendar demonstração</a
         >
 
         <div class="container relatorios">
@@ -83,10 +87,72 @@
       </div>
     </section>
 
-    <section style="height: 100vh"></section>
+    <!-- integracoes -->
+    <section id="section-integracoes" class="integracoes hidden">
+      <div class="container interacoes-content-wrapper">
+        <h3>Integrações</h3>
+
+        <h2>Integrações seguras e fundamentais para o sucesso</h2>
+
+        <div class="interacoes-cards-container">
+          <div class="interacoes-card hidden">
+            <img
+              src="public/logoIntegracoes/mercadoPagoLogo.png"
+              alt="logo do mercado pago"
+            />
+
+            <p>
+              Venda com PIX, cartões e boleto com a qualidade do Mercado Livre.
+            </p>
+          </div>
+
+          <div class="interacoes-card hidden">
+            <img
+              src="public/logoIntegracoes/picPayLogo.png"
+              alt="logo do pic pay"
+            />
+
+            <p>
+              Venda com o PicPay, plataforma que possui mais de 60 milhões de
+              clientes.
+            </p>
+          </div>
+
+          <div class="interacoes-card hidden">
+            <img src="public/logoIntegracoes/ampLogo.png" alt="logo da amp" />
+
+            <p>
+              Fique na frente com artigos e blog com a tecnologia usada pelos
+              grandes portais de notícias.
+            </p>
+          </div>
+
+          <div class="interacoes-card hidden">
+            <img
+              src="public/logoIntegracoes/frenetLogo.png"
+              alt="logo da frenet"
+            />
+
+            <p>Maior integradora de logística para entregas.</p>
+          </div>
+
+          <div class="interacoes-card hidden">
+            <img
+              src="public/logoIntegracoes/blingLogo.png"
+              alt="logo da bling"
+            />
+
+            <p>
+              Conecte sua loja com essa poderosa ferramenta e venda para os
+              principais MarketPlaces.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ajuda -->
-    <section id="section-ajuda" class="container ajuda">
+    <section id="section-ajuda" class="container ajuda hidden">
       <div class="ajuda-left-content">
         <a href="#">acesso rápido</a>
 
@@ -178,7 +244,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer scroll-fade-in">
       <div class="container footer-wrapper">
         <div class="footer-top-content">
           <div class="footer-left-content">
