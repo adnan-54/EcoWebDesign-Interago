@@ -155,81 +155,59 @@
 }
 
 .webvitals-image-scroller {
+  --padding-bottom: 15px;
+  --animation-time: 30s;
+  --image-count: 4;
+  --image-height: 286px;
+  --image-width: 543px;
+  --negative-image-width: calc(var(--image-width) * -1);
+  --container-length: calc(var(--image-width) * var(--image-count));
+  --container-width: max(var(--container-length), 100%);
+
   margin-top: 40px;
-  height: calc(286px + 15px);
-  margin-inline: auto;
+  height: calc(var(--image-height) + var(--padding-bottom));
   position: relative;
   overflow: hidden;
 }
 
-.webvitals-scroll-image-left {
-  width: 543px;
-  height: 286px;
+.webvitals-scroll-image {
+  width: var(--image-width);
+  height: var(--image-height);
   position: absolute;
-  left: max(calc(543px * 4), 100%);
-  animation: scroll-left-animation 20s linear infinite;
   filter: grayscale(1);
-  transition: filter 0.2s;
+  transition: filter 0.4s;
+
+  animation-duration: var(--animation-time);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: calc(
+    var(--animation-time) / var(--image-count) *
+      (var(--image-count) - var(--image)) * -1
+  );
 }
 
-.webvitals-scroll-image-left:hover {
+.webvitals-scroll-image:hover {
   filter: grayscale(0);
+}
+
+.webvitals-scroll-image-left {
+  left: var(--container-width);
+  animation-name: scroll-left-animation;
+}
+
+.webvitals-scroll-image-right {
+  right: var(--container-width);
+  animation-name: scroll-right-animation;
 }
 
 @keyframes scroll-left-animation {
   to {
-    left: -543px;
+    left: var(--negative-image-width);
   }
-}
-
-.webvitals-scroll-image-right {
-  width: 543px;
-  height: 286px;
-  position: absolute;
-  right: max(calc(543px * 4), 100%);
-  animation: scroll-right-animation 20s linear infinite;
-  filter: grayscale(1);
-  transition: filter 0.2s;
-}
-
-.webvitals-scroll-image-right:hover {
-  filter: grayscale(0);
 }
 
 @keyframes scroll-right-animation {
   to {
-    right: -543px;
+    right: var(--negative-image-width);
   }
-}
-
-.webvitals-scroll-image-1 {
-  animation-delay: calc(20s / 4 * (4 - 1) * -1);
-}
-
-.webvitals-scroll-image-2 {
-  animation-delay: calc(20s / 4 * (4 - 2) * -1);
-}
-
-.webvitals-scroll-image-3 {
-  animation-delay: calc(20s / 4 * (4 - 3) * -1);
-}
-
-.webvitals-scroll-image-4 {
-  animation-delay: calc(20s / 4 * (4 - 4) * -1);
-}
-
-.webvitals-scroll-image-5 {
-  animation-delay: calc(20s / 4 * (4 - 1) * -1);
-}
-
-.webvitals-scroll-image-6 {
-  animation-delay: calc(20s / 4 * (4 - 2) * -1);
-}
-
-.webvitals-scroll-image-7 {
-  animation-delay: calc(20s / 4 * (4 - 3) * -1);
-}
-
-.webvitals-scroll-image-8 {
-  animation-delay: calc(20s / 4 * (4 - 4) * -1);
 }
