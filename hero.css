@@ -1,15 +1,15 @@
 .hero {
-  height: 110dvh;
+  height: 101dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: radial-gradient(
     80% 100% at 50% 40%,
-    #06080c 0%,
-    #072435 75%,
-    #051e33 85%,
-    #06080c 100%
+    #0c0b17 0%,
+    #09254a 75%,
+    #0c0e1c 85%,
+    #0c0b17 100%
   );
   animation: background-animation 10s infinite;
   color: white;
@@ -43,14 +43,13 @@
 }
 
 .hero p {
-  max-width: 52ch;
+  max-width: 45ch;
   font-size: 1.125rem;
+  line-height: 140%;
   text-align: center;
   margin: 0;
   margin-top: 45px;
   margin-bottom: 23px;
-  line-height: 155%;
-  letter-spacing: 0.11rem;
 }
 
 .relatorios {
