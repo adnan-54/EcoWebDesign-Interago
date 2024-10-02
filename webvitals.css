@@ -150,9 +150,13 @@
   margin-top: 80px;
 }
 
+.webvitals-bottom-content img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .webvitals-image-scroller {
   margin-top: 40px;
-  height: 286px;
+  height: calc(286px + 15px);
   margin-inline: auto;
   position: relative;
   overflow: hidden;
@@ -162,7 +166,7 @@
   width: 543px;
   height: 286px;
   position: absolute;
-  left: 100%;
+  left: max(calc(543px * 4), 100%);
   animation: scroll-left-animation 20s linear infinite;
   filter: grayscale(1);
   transition: filter 0.2s;
@@ -182,7 +186,7 @@
   width: 543px;
   height: 286px;
   position: absolute;
-  right: 100%;
+  right: max(calc(543px * 4), 100%);
   animation: scroll-right-animation 20s linear infinite;
   filter: grayscale(1);
   transition: filter 0.2s;
