@@ -3,86 +3,77 @@
   margin: 0 auto;
 }
 
+.full-section {
+  min-height: 102vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.half-section {
+  min-height: 50vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.bg-light {
+  background-color: #e5e5e5;
+}
+
+.bg-light-gradient {
+  background: linear-gradient(0deg, #d3d3d3 0%, #dddddd 100%);
+}
+
+.bg-dark {
+  background-color: #444;
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(0deg, #0c0b17 0%, #0c0e1c 10%, #09254a 100%);
+}
+
 .display-contents {
   display: contents;
 }
 
-.scroll-fade-in {
-  opacity: 0;
-  animation: fade-animation linear forwards;
-  animation-timeline: view();
-  animation-range: entry;
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-@keyframes fade-animation {
-  to {
-    opacity: 1;
-  }
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes fade-animation {
-  to {
-    opacity: 1;
-  }
+.gap-small {
+  gap: 10px;
 }
 
-.slide-left {
-  opacity: 0;
-  animation: slide-left-animation 1s 500ms forwards;
+.gap-medium {
+  gap: 20px;
 }
 
-@keyframes slide-left-animation {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.gap-large {
+  gap: 40px;
 }
 
-.slide-up {
-  opacity: 0;
-  animation: slide-up-animation 1s 500ms forwards;
+.justify-center {
+  justify-content: center;
 }
 
-@keyframes slide-up-animation {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.align-center {
+  align-items: center;
 }
 
-.slide-down {
-  opacity: 0;
-  animation: slide-down-animation 1s 500ms forwards;
+.place-end {
+  place-self: end;
 }
 
-@keyframes slide-down-animation {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.text-center {
+  text-align: center;
 }
 
-.hidden {
-  opacity: 0;
-  filter: blur(50px);
-  transform: translateX(-30%);
-  transition: all 1s;
-}
-
-.visible {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
+.color-accent {
+  color: var(--accent-color);
 }

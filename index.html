@@ -13,22 +13,23 @@
     />
 
     <link rel="stylesheet" href="utilities.css" />
+    <link rel="stylesheet" href="components.css" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="hero.css" />
 
     <link rel="stylesheet" href="integracoes.css" />
     <link rel="stylesheet" href="webvitals.css" />
-
+    <link rel="stylesheet" href="temas.css" />
     <link rel="stylesheet" href="ajuda.css" />
     <link rel="stylesheet" href="footer.css" />
 
-    <script defer src="index.js"></script>
     <script defer src="hero.js"></script>
+    <script defer src="temas.js"></script>
   </head>
   <body>
     <!-- header -->
-    <header class="container header slide-down">
+    <header class="container header">
       <div class="hamburger">
         <span class="hamburger__line" />
       </div>
@@ -37,44 +38,34 @@
         <img src="public/interago_novo_logo.svg" alt="logo" />
       </a>
 
-      <nav class="menu">
-        <ul>
-          <li>
-            <a class="button gradient-button" href="#">Acesse sua conta</a>
-          </li>
+      <nav class="flex-row gap-small place-end">
+        <a class="button button-gradient" href="#">Acesse sua conta</a>
 
-          <li>
-            <a class="button outline-button" href="#">Suporte</a>
-          </li>
-        </ul>
+        <a class="button button-outline-light" href="#">Suporte</a>
       </nav>
     </header>
 
     <!-- hero -->
-    <section id="section-hero" class="hero">
+    <section id="hero" class="hero">
       <div class="display-contents">
-        <h1 class="slide-left">
-          Plataforma para lojas virtuais, blogs e websites.
-        </h1>
+        <h1>Plataforma para lojas virtuais, blogs e websites.</h1>
 
-        <p class="slide-left">
+        <p>
           Uma plataforma brasileira que reúne recursos de ponta para amplificar
           seu negócio na internet.
         </p>
 
-        <a class="button large-button gradient-button slide-left" href="#">
+        <a class="button large-button gradient-button" href="#">
           Agendar demonstração</a
         >
 
         <div class="container relatorios">
           <img
-            class="slide-up"
             src="public/imagemRelatorioVendas.png"
             alt="relatorio de vendas"
           />
 
           <img
-            class="slide-up"
             src="public/imagemRelatorioVisitas.png"
             alt="relatorio de visitas"
           />
@@ -89,16 +80,14 @@
     </section>
 
     <!-- integracoes -->
-    <section id="section-integracoes" class="integracoes">
+    <section id="integracoes" class="integracoes">
       <div class="container interacoes-content-wrapper">
-        <h3 class="hidden">Integrações</h3>
+        <h3>Integrações</h3>
 
-        <h2 class="hidden">
-          Integrações seguras e fundamentais para o sucesso
-        </h2>
+        <h2>Integrações seguras e fundamentais para o sucesso</h2>
 
         <div class="interacoes-cards-container">
-          <div class="interacoes-card hidden">
+          <div class="interacoes-card">
             <img
               src="public/logoIntegracoes/mercadoPagoLogo.png"
               alt="logo do mercado pago"
@@ -109,7 +98,7 @@
             </p>
           </div>
 
-          <div class="interacoes-card hidden">
+          <div class="interacoes-card">
             <img
               src="public/logoIntegracoes/picPayLogo.png"
               alt="logo do pic pay"
@@ -121,7 +110,7 @@
             </p>
           </div>
 
-          <div class="interacoes-card hidden">
+          <div class="interacoes-card">
             <img src="public/logoIntegracoes/ampLogo.png" alt="logo da amp" />
 
             <p>
@@ -130,7 +119,7 @@
             </p>
           </div>
 
-          <div class="interacoes-card hidden">
+          <div class="interacoes-card">
             <img
               src="public/logoIntegracoes/frenetLogo.png"
               alt="logo da frenet"
@@ -139,7 +128,7 @@
             <p>Maior integradora de logística para entregas.</p>
           </div>
 
-          <div class="interacoes-card hidden">
+          <div class="interacoes-card">
             <img
               src="public/logoIntegracoes/blingLogo.png"
               alt="logo da bling"
@@ -155,19 +144,19 @@
     </section>
 
     <!-- webvitals -->
-    <section id="section-webvitals" class="webvitals">
+    <section id="webvitals" class="webvitals">
       <div class="container webvitals-content-wrapper">
-        <div class="webvitals-top-content hidden">
+        <div class="webvitals-top-content">
           <div>
-            <p class="hidden">infraestrutura 100% em cloud</p>
+            <p>infraestrutura 100% em cloud</p>
 
-            <h2 class="hidden">
+            <h2>
               Sistema preparado para negócios de pequeno, médio e grande porte.
             </h2>
           </div>
 
           <ul>
-            <li class="hidden">
+            <li>
               <img
                 src="public/icones/iconeCheck.svg"
                 alt="icone de visto aprovado"
@@ -179,7 +168,7 @@
               </p>
             </li>
 
-            <li class="hidden">
+            <li>
               <img
                 src="public/icones/iconeCheck.svg"
                 alt="icone de visto aprovado"
@@ -188,7 +177,7 @@
               <p>Disparos de e-mail com segurança e escala garantida.</p>
             </li>
 
-            <li class="hidden">
+            <li>
               <img
                 src="public/icones/iconeCheck.svg"
                 alt="icone de visto aprovado"
@@ -203,13 +192,13 @@
           </ul>
         </div>
 
-        <div class="webvitals-middle-content hidden">
+        <div class="webvitals-middle-content">
           <p>webvitals</p>
 
           <h2>Tenha seu site otimizado nas pesquisas do Google</h2>
 
           <div class="webvitals-features-container">
-            <div class="webvitals-feature-item hidden">
+            <div class="webvitals-feature-item">
               <img src="public/icones/iconeExpUser.svg" />
 
               <div>
@@ -223,7 +212,7 @@
               </div>
             </div>
 
-            <div class="webvitals-feature-item hidden">
+            <div class="webvitals-feature-item">
               <img src="public/icones/iconePageSpeed.svg" />
 
               <div>
@@ -239,7 +228,7 @@
               </div>
             </div>
 
-            <div class="webvitals-feature-item hidden">
+            <div class="webvitals-feature-item">
               <img src="public/icones/iconeMetadados.svg" />
 
               <div>
@@ -318,8 +307,52 @@
       </div>
     </section>
 
+    <!-- temas -->
+    <section id="temas" class="section-tema full-section">
+      <div class="container flex-column gap-large align-center text-center">
+        <span class="color-accent">visibilidade</span>
+
+        <h2 class="section-title">
+          O sistema se adapta a você. Experimente outro estilo.
+        </h2>
+
+        <div class="flex-row gap-medium">
+          <button id="button-tema-light" class="button-tema">
+            <img
+              src="public/icones/iconeTemaClaro.svg"
+              alt="icone de tema claro"
+            />
+            tema claro
+          </button>
+
+          <button id="button-tema-dark" class="button-tema">
+            <img
+              src="public/icones/iconeTemaEscuro.svg"
+              alt="icone de tema claro"
+            />
+
+            tema escuro
+          </button>
+        </div>
+
+        <div class="imagem-tema-container">
+          <img
+            id="image-tema-light"
+            class="imagem-tema"
+            src="public/tema_claro.png"
+          />
+
+          <img
+            id="image-tema-dark"
+            class="imagem-tema"
+            src="public/tema_escuro.png"
+          />
+        </div>
+      </div>
+    </section>
+
     <!-- ajuda -->
-    <section id="section-ajuda" class="container ajuda hidden">
+    <section id="ajuda" class="container ajuda">
       <div class="ajuda-left-content">
         <a href="#">acesso rápido</a>
 
@@ -411,7 +444,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="footer scroll-fade-in">
+    <footer class="footer">
       <div class="container footer-wrapper">
         <div class="footer-top-content">
           <div class="footer-left-content">

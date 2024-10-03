@@ -42,14 +42,3 @@
 .logo img {
   width: 147px;
 }
-
-.menu {
-  display: flex;
-  gap: 0.7rem;
-  place-self: end;
-}
-
-.menu ul {
-  list-style: none;
-  display: contents;
-}

@@ -1,0 +1,86 @@
+@property --background-color-1 {
+  syntax: "<color>";
+  initial-value: #d3d3d3;
+  inherits: false;
+}
+
+@property --background-color-2 {
+  syntax: "<color>";
+  initial-value: #dddddd;
+  inherits: false;
+}
+
+.section-tema {
+  background: linear-gradient(
+    0deg,
+    var(--background-color-1) 0%,
+    var(--background-color-2) 100%
+  );
+  color: black;
+  transition: --background-color-1 0.5s, --background-color-2 0.5s, color 0.5s;
+}
+
+.section-tema-dark {
+  --background-color-1: #151515;
+  --background-color-2: #252525;
+
+  color: white;
+}
+
+.section-tema-dark .button-tema {
+  filter: invert(1);
+}
+
+.button-tema {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #464646;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.5s, filter 0.5s, scale 0.3s, background-color 0.3s;
+}
+
+.button-tema:hover {
+  scale: 1.03;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button-tema-selected {
+  border-color: #464646;
+  background-color: transparent !important;
+  scale: 1.03;
+}
+
+.button-tema > img {
+  width: 34px;
+  height: 34px;
+}
+
+.imagem-tema-container {
+  position: relative;
+  width: 1280px;
+  height: 658px;
+}
+
+.imagem-tema {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.imagem-tema-selected {
+  opacity: 1;
+}
