@@ -1,9 +1,4 @@
 .hero {
-  height: 101dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-image: radial-gradient(
     80% 100% at 50% 40%,
     #0c0b17 0%,

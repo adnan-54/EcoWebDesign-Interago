@@ -48,7 +48,10 @@
     </header>
 
     <!-- hero -->
-    <section id="hero" class="hero">
+    <section
+      id="hero"
+      class="hero full-section flex-column justify-center align-center"
+    >
       <div class="display-contents">
         <h1>Plataforma para lojas virtuais, blogs e websites.</h1>
 
@@ -237,11 +240,18 @@
     </section>
 
     <!-- integracoes -->
-    <section id="integracoes" class="integracoes">
-      <div class="container interacoes-content-wrapper">
-        <h3>Integrações</h3>
+    <section
+      id="integracoes"
+      class="integracoes full-section bg-light-gradient"
+    >
+      <div
+        class="container full-height flex-column align-center justify-center gap-small"
+      >
+        <span class="color-accent">Integrações</span>
 
-        <h2>Integrações seguras e fundamentais para o sucesso</h2>
+        <h2 class="section-title text-center">
+          Integrações seguras e fundamentais para o sucesso
+        </h2>
 
         <div class="interacoes-cards-container">
           <div class="interacoes-card">
@@ -302,9 +312,11 @@
 
     <!-- webvitals -->
     <section id="webvitals" class="webvitals">
-      <div class="container webvitals-content-wrapper">
-        <div class="webvitals-top-content">
-          <div>
+      <div class="container flex-column full-width">
+        <div
+          class="webvitals-top-content flex-row align-center justify-center gap-large"
+        >
+          <div class="flex-column gap-medium">
             <p>infraestrutura 100% em cloud</p>
 
             <h2>
@@ -350,9 +362,11 @@
         </div>
 
         <div class="webvitals-middle-content">
-          <p>webvitals</p>
+          <span class="color-accent">webvitals</span>
 
-          <h2>Tenha seu site otimizado nas pesquisas do Google</h2>
+          <h2 class="section-title text-center">
+            Tenha seu site otimizado nas pesquisas do Google
+          </h2>
 
           <div class="webvitals-features-container">
             <div class="webvitals-feature-item">
@@ -465,13 +479,11 @@
     </section>
 
     <!-- temas -->
-    <section id="temas" class="section-tema full-section">
-      <div
-        class="container full-height flex-column gap-large align-center text-center"
-      >
+    <section id="temas" class="section-tema full-height full-section">
+      <div class="container full-height flex-column gap-large align-center">
         <span class="color-accent">visibilidade</span>
 
-        <h2 class="section-title">
+        <h2 class="section-title text-center">
           O sistema se adapta a você. Experimente outro estilo.
         </h2>
 
@@ -511,11 +523,14 @@
     </section>
 
     <!-- ajuda -->
-    <section id="ajuda" class="container ajuda">
-      <div class="ajuda-left-content">
-        <a href="#">acesso rápido</a>
+    <section
+      id="ajuda"
+      class="container half-section flex-row gap-large justify-center align-center ajuda"
+    >
+      <div class="flex-column gap-medium">
+        <span class="color-accent">acesso rápido</span>
 
-        <h2>Precisa de ajuda?</h2>
+        <h2 class="section-title">Precisa de ajuda?</h2>
 
         <div class="card-container">
           <a class="card-item" href="#">
@@ -565,7 +580,7 @@
       <!-- separator -->
       <span class="vertical-separator"></span>
 
-      <div class="ajuda-right-content">
+      <div class="flex-column gap-medium">
         <span style="display: flex; gap: 10px">
           <img
             src="public/icones/9026080_trend_up_icon.svg"
@@ -574,59 +589,45 @@
           <h3>Tópicos mais relvantes</h3>
         </span>
 
-        <ul>
-          <li>
-            <a href="#">Como criar uma conta no Interago</a>
-          </li>
+        <div class="flex-column gap-medium">
+          <a href="#">Como criar uma conta no Interago</a>
 
-          <li>
-            <a href="#">Como acessar os relatórios de visitas</a>
-          </li>
+          <a href="#">Como acessar os relatórios de visitas</a>
 
-          <li>
-            <a href="#">Cadastrando seus produtos</a>
-          </li>
+          <a href="#">Cadastrando seus produtos</a>
 
-          <li>
-            <a href="#">Configurando Mercado Pago</a>
-          </li>
+          <a href="#">Configurando Mercado Pago</a>
 
-          <li>
-            <a href="#">Configurando Frenet</a>
-          </li>
+          <a href="#">Configurando Frenet</a>
 
-          <li>
-            <a href="#">Como adicionar contatos para receber relatórios</a>
-          </li>
-        </ul>
+          <a href="#">Como adicionar contatos para receber relatórios</a>
+        </div>
       </div>
     </section>
 
     <!-- footer -->
     <footer class="footer">
-      <div class="container footer-wrapper">
-        <div class="footer-top-content">
-          <div class="footer-left-content">
+      <div
+        class="container footer-wrapper full-width full-height flex-column gap-medium"
+      >
+        <div class="flex-row flex-grow gap-large justify-between">
+          <div class="flex-column align-start gap-small">
             <h2>Uma plataforma pensada em você.</h2>
             <h2>Agende uma demonstração.</h2>
 
-            <a class="button large-button gradient-button" href="#">
-              Agendar agora
-            </a>
+            <a class="button button-gradient" href="#"> Agendar agora </a>
           </div>
 
-          <div class="footer-right-content">
+          <div class="flex-column gap-small align-start">
             <h3>Plataforma</h3>
 
             <div class="link-list">
-              <a class="link-item" href="#">Inicial</a>
-              <a class="link-item" href="#">Recursos</a>
-
-              <a class="link-item" href="#">Agende uma demonstração</a>
-              <a class="link-item" href="#">Ajuda</a>
-
-              <a class="link-item" href="#">Planos e preços</a>
-              <a class="link-item" href="#">Agências parceiras</a>
+              <a href="#">Inicial</a>
+              <a href="#">Recursos</a>
+              <a href="#">Agende uma demonstração</a>
+              <a href="#">Ajuda</a>
+              <a href="#">Planos e preços</a>
+              <a href="#">Agências parceiras</a>
             </div>
           </div>
         </div>
@@ -634,7 +635,7 @@
         <!-- separator -->
         <span class="horizontal-separator"></span>
 
-        <div class="footer-bottom-content">
+        <div class="flex-row justify-between">
           <p>
             © 2023 Interago - Desenvolvimento de websites - Todos os direitos
             reservados - CNPJ 12.768.802/0001-25
