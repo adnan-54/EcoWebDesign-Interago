@@ -1,3 +1,15 @@
+@property --button-background-color-1 {
+  syntax: "<color>";
+  initial-value: #1e71e3;
+  inherits: false;
+}
+
+@property --button-background-color-2 {
+  syntax: "<color>";
+  initial-value: #3897f1;
+  inherits: false;
+}
+
 .button {
   display: flex;
   flex-direction: row;
@@ -7,11 +19,12 @@
   gap: 20px;
   text-decoration: none;
   background-color: transparent;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 22px;
   border: 0px;
   cursor: pointer;
   transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+  color: white;
 }
 
 .button > img {
@@ -20,12 +33,17 @@
 }
 
 .button-gradient {
-  color: white;
-  background: linear-gradient(90deg, #1e71e3 0%, #3897f1 100%);
+  background: linear-gradient(
+    90deg,
+    var(--button-background-color-1) 0%,
+    var(--button-background-color-2) 100%
+  );
+  transition: --button-background-color-1 0.5s, --button-background-color-2 0.5s;
 }
 
 .button-gradient:hover {
-  background: var(--accent-color-dark);
+  --button-background-color-1: #1565d6;
+  --button-background-color-2: #1565d6;
 }
 
 .button-outline-light {
@@ -58,6 +76,6 @@
 
 .section-title {
   line-height: 130%;
-  font-size: 50px;
+  font-size: 45px;
   max-width: 30ch;
 }

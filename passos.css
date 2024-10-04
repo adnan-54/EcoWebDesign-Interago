@@ -1,0 +1,165 @@
+.passos-nav ul {
+  list-style: none;
+  position: relative;
+}
+
+.passos-nav ul::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  width: 2px;
+  top: 10px;
+  height: calc(100% - 20px);
+  background-color: #b1b1b1;
+  z-index: -1;
+}
+
+.passos-nav ul::after {
+  content: attr(data-progress);
+  position: absolute;
+  left: -20px;
+  width: 2px;
+  top: 10px;
+  height: var(--progress);
+  background-color: #110202;
+  z-index: 0;
+  transition: height 0.5s;
+  top: 0;
+  transform: scaleY(90%);
+  margin-top: 5px;
+}
+
+.passos-nav ul li {
+  font-weight: 600;
+  color: #b1b1b1;
+}
+
+.passos-nav a {
+  color: inherit;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.passos-nav a::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 8px;
+  height: 8px;
+  left: -27px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  border: 4px solid #b1b1b1;
+  z-index: 3;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+
+.passos-nav a.active {
+  color: #464646;
+}
+
+.passos-nav a.active::before {
+  background-color: #464646;
+  border-color: #464646;
+}
+
+.passos-content {
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.passos-hidden {
+  display: none;
+}
+
+.passos-visible {
+  display: flex;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(5%);
+  animation: show-content-animation 0.5s ease-in forwards;
+}
+
+@keyframes show-content-animation {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+
+.passos-text > h1 {
+  font-size: 40px;
+  max-width: 26ch;
+  margin: 0;
+}
+
+.passos-text > p {
+  margin: 0;
+  max-width: 52ch;
+}
+
+.passos-gif {
+  height: 452px;
+  width: 738px;
+}
+
+.passos-image-scroller {
+  --padding-y: 30px;
+  --animation-time: 15s;
+  --image-count: 5;
+  --image-height: 80px;
+  --image-width: 200px;
+  --negative-image-width: calc(var(--image-width) * -1);
+  --container-length: calc(var(--image-width) * var(--image-count));
+  --container-width: max(var(--container-length), 100%);
+
+  height: calc(var(--image-height) + var(--padding-y));
+  width: 70%;
+  margin-inline: auto;
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.passos-scroll-image {
+  width: var(--image-width);
+  height: var(--image-height);
+  object-fit: contain;
+  position: absolute;
+  filter: grayscale(1);
+  transition: filter 0.4s;
+
+  animation-duration: var(--animation-time);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: calc(
+    var(--animation-time) / var(--image-count) *
+      (var(--image-count) - var(--image)) * -1
+  );
+
+  left: var(--container-width);
+  animation-name: scroll-left-animation;
+}
+
+.passos-scroll-image:hover {
+  filter: grayscale(0);
+}
+
+@keyframes scroll-left-animation {
+  to {
+    left: var(--negative-image-width);
+  }
+}

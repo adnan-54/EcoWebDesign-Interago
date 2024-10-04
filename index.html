@@ -14,10 +14,11 @@
 
     <link rel="stylesheet" href="utilities.css" />
     <link rel="stylesheet" href="components.css" />
+
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="hero.css" />
-
+    <link rel="stylesheet" href="passos.css" />
     <link rel="stylesheet" href="integracoes.css" />
     <link rel="stylesheet" href="webvitals.css" />
     <link rel="stylesheet" href="temas.css" />
@@ -25,6 +26,7 @@
     <link rel="stylesheet" href="footer.css" />
 
     <script defer src="hero.js"></script>
+    <script defer src="passos.js"></script>
     <script defer src="temas.js"></script>
   </head>
   <body>
@@ -55,9 +57,7 @@
           seu negócio na internet.
         </p>
 
-        <a class="button large-button gradient-button" href="#">
-          Agendar demonstração</a
-        >
+        <a class="button button-gradient" href="#"> Agendar demonstração</a>
 
         <div class="container relatorios">
           <img
@@ -76,6 +76,163 @@
           src="public/inicial-interago.png"
           alt="tela inicial"
         />
+      </div>
+    </section>
+
+    <!-- passos -->
+    <section id="passos" class="full-section">
+      <div
+        class="container full-width full-height flex-column gap-large justify-center"
+      >
+        <div class="flex-row">
+          <div
+            class="flex-column align-center justify-center flex-grow passos-nav"
+          >
+            <ul
+              id="nav-progress"
+              class="flex-column gap-large"
+              style="--progress: 0%"
+            >
+              <li>
+                <a class="active">1. Solicite seu site</a>
+              </li>
+
+              <li>
+                <a>2. Venda online</a>
+              </li>
+
+              <li>
+                <a>3. Gerencie</a>
+              </li>
+
+              <li>
+                <a>4. Obtenha resultados</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="passos-content passos-hidden">
+            <div
+              class="flex-column align-start gap-large justify-center passos-text"
+            >
+              <h1 class="section-title">
+                Dê o primeiro passo para elevar seu negócio para o próximo nível
+                com a internet
+              </h1>
+
+              <p>
+                Com um ambiente desenvolvido para atender diferentes categorias
+                de sites, o Interago oferece excelência na criação de lojas
+                virtuais, portais de notícias e sites institucionais. O primeiro
+                passo para o sucesso é dado ao falar com nossos especialistas
+                para conhecer todas as oportunidades para sua empresa.
+              </p>
+
+              <a class="button button-gradient" href="#">Começar agora</a>
+            </div>
+
+            <img
+              class="passos-gif"
+              src="public/tema_claro.png"
+              alt="imagem de passos"
+            />
+          </div>
+
+          <div class="passos-content passos-hidden">
+            <div
+              class="flex-column align-start gap-large justify-center passos-text"
+            >
+              <h1 class="section-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h1>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus debitis omnis obcaecati nesciunt, repellendus,
+                molestiae, tempora deserunt magnam voluptas non aut sint atque
+                nisi eligendi qui natus nihil necessitatibus reprehenderit.
+              </p>
+            </div>
+
+            <img
+              class="passos-gif"
+              src="public/tema_claro.png"
+              alt="imagem de passos"
+            />
+          </div>
+
+          <div class="passos-content passos-hidden">
+            <div
+              class="flex-column align-start gap-large justify-center passos-text"
+            >
+              <h1 class="section-title">
+                Interdum proin nostra ad cras vitae.
+              </h1>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores eaque nisi ex libero voluptas, ducimus incidunt nam
+                in dolorem sequi architecto, fuga beatae tempora aliquid illo
+                modi molestiae inventore ab.
+              </p>
+            </div>
+
+            <img
+              class="passos-gif"
+              src="public/tema_claro.png"
+              alt="imagem de passos"
+            />
+          </div>
+
+          <div class="passos-content passos-hidden">
+            <div
+              class="flex-column align-start gap-large justify-center passos-text"
+            >
+              <h1 class="section-title">Mattis donec fames risus amet hac.</h1>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus debitis omnis obcaecati nesciunt, repellendus,
+                molestiae, tempora deserunt magnam voluptas non aut sint atque
+                nisi eligendi qui natus nihil necessitatibus reprehenderit.
+              </p>
+            </div>
+
+            <img
+              class="passos-gif"
+              src="public/tema_claro.png"
+              alt="imagem de passos"
+            />
+          </div>
+        </div>
+
+        <div class="passos-image-scroller">
+          <img
+            class="passos-scroll-image"
+            style="--image: 1"
+            src="public/logoClientes/ceftemLogo.png"
+          />
+          <img
+            class="passos-scroll-image"
+            style="--image: 2"
+            src="public/logoClientes/logo 1.png"
+          />
+          <img
+            class="passos-scroll-image"
+            style="--image: 3"
+            src="public/logoClientes/Logo-Lundgaard-Jensen-Banner 1.png"
+          />
+          <img
+            class="passos-scroll-image"
+            style="--image: 4"
+            src="public/logoClientes/Logo Branco - Thermas Acqualinda-min 1.png"
+          />
+          <img
+            class="passos-scroll-image"
+            style="--image: 5"
+            src="public/logoClientes/logoLaVillaSVGBranco 1.png"
+          />
+        </div>
       </div>
     </section>
 
@@ -309,7 +466,9 @@
 
     <!-- temas -->
     <section id="temas" class="section-tema full-section">
-      <div class="container flex-column gap-large align-center text-center">
+      <div
+        class="container full-height flex-column gap-large align-center text-center"
+      >
         <span class="color-accent">visibilidade</span>
 
         <h2 class="section-title">

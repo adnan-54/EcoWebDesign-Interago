@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const rotation = 30 - 30 * (1 - Math.max(0, heroVisiblePercent - 0.5) * 2);
 
-    console.log(rotation);
-
     parallaxBanner.style.transform = `perspective(850px) translateY(52%) rotateX(${rotation}deg) scale(85%, 75%)`;
   });
 });

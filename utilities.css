@@ -4,7 +4,8 @@
 }
 
 .full-section {
-  min-height: 102vh;
+  min-height: 105dvh;
+  height: 1px; /* hack para height 100% funcionar */
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -35,15 +36,26 @@
   display: contents;
 }
 
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .flex-row {
   display: flex;
   flex-direction: row;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .gap-small {
@@ -60,6 +72,14 @@
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-start {
+  align-items: flex-start;
 }
 
 .align-center {
