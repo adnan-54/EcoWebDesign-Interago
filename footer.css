@@ -14,7 +14,7 @@
 }
 
 .footer span.horizontal-separator {
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .footer-wrapper {
@@ -22,6 +22,7 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   padding: 50px 135px;
+  padding-bottom: 25px;
 }
 
 .link-list {

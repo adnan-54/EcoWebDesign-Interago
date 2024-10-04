@@ -3,6 +3,10 @@
   --accent-color-dark: #1e71e3;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
